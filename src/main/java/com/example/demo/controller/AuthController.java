@@ -34,7 +34,8 @@ public class AuthController {
             throw new RuntimeException("Invalid password");
         }
 
-        return jwtUtils.generateToken(email);
+
+        return jwtUtils.generateToken(user.getEmail(), user.getRole());
     }
 
 }
